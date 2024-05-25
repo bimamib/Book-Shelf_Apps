@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const id = +new Date();
         const bookObject = generateBookObject(id, bookTitle, bookAuthor, bookYear, bookIsComplete);
         books.push(bookObject);
+        showAlert("Buku berhasil ditambahkan", "success");
         saveDataToStorage();
     }
 
@@ -139,19 +140,19 @@ document.addEventListener("DOMContentLoaded", function () {
         bookContainer.appendChild(textContainer);
         bookContainer.setAttribute("id", bookObject.id);
 
+        const trashButton = document.createElement("button");
+        trashButton.classList.add("trash-button");
+        trashButton.setAttribute("title", "Delete");
+        trashButton.addEventListener("click", function () {
+            confirmDeleteBook(bookObject);
+        });
+
         if (bookObject.isCompleted) {
             const undoButton = document.createElement("button");
             undoButton.classList.add("undo-button");
             undoButton.setAttribute("title", "Undo");
             undoButton.addEventListener("click", function () {
                 undoBookFromCompleted(bookObject.id);
-            });
-
-            const trashButton = document.createElement("button");
-            trashButton.classList.add("trash-button");
-            trashButton.setAttribute("title", "Delete");
-            trashButton.addEventListener("click", function () {
-                removeBook(bookObject.id);
             });
 
             actionContainer.append(undoButton, trashButton);
@@ -169,13 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
             editButton.setAttribute("title", "Edit");
             editButton.addEventListener("click", function () {
                 editBook(bookObject.id);
-            });
-
-            const trashButton = document.createElement("button");
-            trashButton.classList.add("trash-button");
-            trashButton.setAttribute("title", "Delete");
-            trashButton.addEventListener("click", function () {
-                removeBook(bookObject.id);
             });
 
             actionContainer.append(checkButton, editButton, trashButton);
@@ -197,6 +191,29 @@ document.addEventListener("DOMContentLoaded", function () {
         books.splice(bookIndex, 1);
         saveDataToStorage();
     }
+
+    function confirmDeleteBook(book) {
+        Swal.fire({
+          text: `Apakah Anda yakin ingin menghapus buku "${book.title}"?`,
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Ya, hapus buku",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            removeBook(book.id);
+            showAlert("Buku berhasil dihapus", "success");
+          }
+        });
+      }
+
+      function showAlert(text, icon) {
+        Swal.fire({
+          text: text,
+          icon: icon,
+        });
+      }
 
     function editBook(bookId) {
         const bookTarget = findBook(bookId);
@@ -284,6 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const bookTarget = findBook(bookId);
         if (bookTarget == null) return;
         bookTarget.isCompleted = true;
+        showAlert("Buku selesai dibaca", "success");
         saveDataToStorage();
     }
 
