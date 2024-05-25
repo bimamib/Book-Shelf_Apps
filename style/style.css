@@ -1,23 +1,26 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
-body, input, button{
-  background: #FFE0B5;
+body,
+input,
+button {
+	/* background: #FFE0B5; */
 	font-family: 'Quicksand', sans-serif;
 }
 
-.shadow{
+/* .shadow {
 	box-shadow: 0 5px 8px rgba(67, 83, 52, .5), 0 10px 30px rgba(67, 83, 52, .2);
-}
+} */
 
-input, button{
+input,
+button {
 	font-size: 16px;
 }
 
-.head_bar{
+.head_bar {
 	padding: 12px;
 	display: flex;
 	align-items: center;
@@ -27,33 +30,33 @@ input, button{
 }
 
 main {
-    max-width: 800px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 16px;
+	max-width: 800px;
+	width: 80%;
+	margin: 0 auto;
+	padding: 16px;
 }
 
-.input_section{
+.input_section {
 	max-width: 800px;
 	width: 80%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
-	background-color: #AF8260;
+	/* background-color: #AF8260; */
 	border-radius: 10px;
 }
 
-.input_section > h2{
+.input_section > h2 {
 	text-align: center;
 	color: #561C24;
 }
 
-.input_section > form > .input{
+.input_section > form > .input {
 	margin: 8px 0;
 }
 
-.input_section > form > button{
+.input_section > form>button {
 	background-color: FFF2D7;
 	color: #561C24;
 	border: 2px solid #561C24;
@@ -63,52 +66,52 @@ main {
 	cursor: pointer;
 }
 
-.input_section > form > button:hover{
+.input_section > form > button:hover {
 	background-color: #803D3B;
 	color: #FFE0B5;
 }
 
-.input_section > form > button > span{
+.input_section > form > button > span {
 	font-weight: bold;
 }
 
-.input_section > form > .input > input{
+.input_section > form > .input > input {
 	display: block;
 	width: 100%;
 	color: #803D3B;
-	background-color: #FFE0B5;
-	border-color: #AF8260;
+	/* background-color: #FFE0B5;
+	border-color: #AF8260; */
 	padding: 8px;
 	border-radius: 5px;
 }
 
-.input_section > form > .input > input:focus{
+.input_section > form > .input > input:focus {
 	outline: none !important;
 	box-shadow: inset -1px -1px 5px rgba(83, 58, 52, 0.949);
 }
 
-.input_section > form > .input > label{
+.input_section > form > .input > label {
 	color: #561C24;
 	font-weight: bold;
 }
 
-.input_section > form > .input_inline{
+.input_section > form > .input_inline {
 	margin: 12px 0;
 	display: flex;
 	align-items: center;
 }
 
-.input_section > form > .input_inline > label{
+.input_section > form > .input_inline > label {
 	color: #561C24;
 	font-weight: bold;
 	margin-right: 10px;
 }
 
-.input_section > form > .input_inline > input[type=checkbox]{
+/* .input_section > form > .input_inline > input[type=checkbox]{
 	accent-color: #F8C794;
-}
+} */
 
-.search_section{
+/* .search_section {
 	max-width: 800px;
 	width: 80%;
 	margin: 32px auto;
@@ -118,91 +121,105 @@ main {
 	align-items: center;
 	padding: 16px;
 	border-radius: 10px;
-}
+} */
 
-.search_section > h2{
+.search_section > h2 {
 	color: #561C24;
 }
 
-.search_section > form{
+/* .search_section > form {
 	padding: 16px;
 	width: 100%;
 	display: flex;
 	gap: 10px;
-}
+} */
 
-.search_section > form > input{
+/* .search_section > form > input {
 	width: 75%;
 	padding: 5px;
 	color: #AF8260;
 	background-color: #FFE0B5;
 	border-color: #561C24;
 	border-radius: 5px;
-}
+} */
 
-.search_section > form > input:focus{
+/* .search_section > form > input:focus {
 	outline: none !important;
 	box-shadow: inset -1px -1px 5px rgba(83, 58, 52, 0.949);
-}
+} */
 
-.search_section > form > button{
+/* .search_section > form >button {
 	width: 25%;
 	background-color: #AF8260;
 	color: #561C24;
 	border: 2px solid #561C24;
 	border-radius: 5px;
 	cursor: pointer;
-}
+} */
 
-.search_section > form > button:hover{
+/* .search_section > form > button:hover {
 	background-color: #561C24;
 	color: #FFE0B5;
+} */
+
+.search_section {
+	max-width: 800px;
+	width: 80%;
+	border-radius: 10px;
+	flex-direction: column;
+	align-items: center;
+	padding: 16px;
+	margin: 32px auto;
 }
 
-.shelf{
+.shelf {
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
 }
 
-.book_shelf{
+.book_shelf {
 	width: 80%;
 	margin: 0 auto;
-	background-color: #AF8260;
+	/* background-color: #AF8260; */
 	padding: 16px;
 	border-radius: 10px;
 }
 
-.book_shelf > h2{
+.book_shelf > h2 {
 	color: #561C24;
 }
 
-.book_shelf > .book_list{
-	padding: 16px;
+.book_shelf >.book_list {
+	padding: 4px;
 }
 
-.book_shelf > .book_list > .book_item{
-	background-color: #FFE0B5;
+.book_shelf > .book_list > .book_item {
+	/* background-color: #FFE0B5; */
 	display: flex;
 	flex-direction: row;
 	padding: 8px 16px 16px 16px;
-	border: 1px solid #ECB176;
+	/* border: 1px solid #ECB176; */
 	border-radius: 5px;
 	margin: 20px 0;
 }
 
-.book_shelf > .book_list > .book_item > .book-info{
+.book_shelf > .book_list > .book_item > .book-info {
 	width: 90%;
 	display: flex;
 	flex-direction: column;
 }
 
-.book_shelf > .book_list > .book_item > .book-info > h3, p{
+.book_shelf > .book_list > .book_item > .book-info > h3, p {
 	color: #AF8260;
 	margin: 8px 0;
 }
 
-.book_shelf > .book_list > .book_item > .action{
+.book_shelf > .book_list > .book_item > .book-info > h3 {
+	font-weight: bold;
+}
+
+.book_shelf > .book_list > .book_item > .action {
 	width: 10%;
 	display: flex;
 	flex-direction: column;
@@ -211,51 +228,86 @@ main {
 	margin-top: 3px;
 }
 
-.book_shelf > .book_list > .book_item > .action > button{
+.book_shelf > .book_list > .book_item > .action > button {
 	width: 36px;
 	height: 36px;
 	border: none;
 	cursor: pointer;
 }
 
-.book_shelf > .book_list > .book_item > .action > .check-button{
+.book_shelf > .book_list > .book_item > .action > .check-button {
 	background: url('../assets/check-outline.svg');
 	background-size: contain;
 }
 
-.book_shelf > .book_list > .book_item > .action > .check-button:hover{
+.book_shelf > .book_list > .book_item > .action > .check-button:hover {
 	background: url('../assets/check-solid.svg');
 	background-size: contain;
 }
 
-.book_shelf > .book_list > .book_item > .action > .edit-button{
+.book_shelf > .book_list > .book_item > .action > .edit-button {
 	background: url('../assets/edit-outline.svg');
 	background-size: contain;
 }
 
-.book_shelf > .book_list > .book_item > .action > .edit-button:hover{
+.book_shelf > .book_list > .book_item > .action > .edit-button:hover {
 	background: url('../assets/edit-solid.svg');
 	background-size: contain;
 }
 
-.book_shelf > .book_list > .book_item > .action > .trash-button{
+.book_shelf > .book_list > .book_item > .action > .trash-button {
 	background: url('../assets/trash-outline.svg');
 	background-size: contain;
 }
 
-.book_shelf > .book_list > .book_item > .action > .trash-button:hover{
+.book_shelf > .book_list > .book_item > .action > .trash-button:hover {
 	background: url('../assets/trash-fill.svg');
 	background-size: contain;
 }
 
-.book_shelf > .book_list > .book_item > .action > .undo-button{
-    width: 36px;
-    height: 36px;
+.book_shelf > .book_list > .book_item > .action > .undo-button {
 	background: url('../assets/undo_outline.svg');
 	background-size: contain;
 }
 
-.book_shelf > .book_list > .book_item > .action > .undo-button:hover{
+.book_shelf > .book_list > .book_item > .action > .undo-button:hover {
 	background: url('../assets/undo_fill.svg');
 	background-size: contain;
+}
+
+footer{
+  padding: 20px;
+  color: #FAF1E4;
+  background-color: #435334;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 1200px) {
+	.shelf {
+		max-width: 800px;
+		width: 80%;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+
+	.book_shelf {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.book_shelf > .book_list > .book_item {
+		flex-direction: column;
+	}
+
+	.book_shelf > .book_list > .book_item > .book-info {
+		width: 100%;
+	}
+
+	.book_shelf > .book_list > .book_item > .action {
+		width: 100%;
+		flex-direction: row;
+	}
 }
