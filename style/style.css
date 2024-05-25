@@ -8,7 +8,7 @@ body,
 input,
 button {
 	/* background: #FFE0B5; */
-	font-family: 'Quicksand', sans-serif;
+	font-family: "Nunito", sans-serif;
 }
 
 /* .shadow {
@@ -216,7 +216,7 @@ main {
 }
 
 .book_shelf > .book_list > .book_item > .book-info > h3 {
-	font-weight: bold;
+	font-weight: 800;
 }
 
 .book_shelf > .book_list > .book_item > .action {
@@ -280,7 +280,6 @@ footer{
   color: #FAF1E4;
   background-color: #435334;
   text-align: center;
-  font-weight: bold;
 }
 
 
