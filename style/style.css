@@ -56,11 +56,11 @@ main {
 	margin: 8px 0;
 }
 
-.input_section > form>button {
-	background-color: FFF2D7;
+.input_section > form > button {
+	background-color: #FFF2D7;
 	color: #561C24;
-	border: 2px solid #561C24;
-	border-radius: 5px;
+	/* border: 2px solid #561C24; */
+	border-radius: 6px;
 	width: 100%;
 	padding: 8px;
 	cursor: pointer;
@@ -200,7 +200,7 @@ main {
 	flex-direction: row;
 	padding: 8px 16px 16px 16px;
 	/* border: 1px solid #ECB176; */
-	border-radius: 5px;
+	border-radius: 6px;
 	margin: 20px 0;
 }
 
