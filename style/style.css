@@ -82,13 +82,13 @@ main {
 	/* background-color: #FFE0B5;
 	border-color: #AF8260; */
 	padding: 8px;
-	border-radius: 5px;
+	border-radius: 6px;
 }
 
-.input_section > form > .input > input:focus {
+/* .input_section > form > .input > input:focus {
 	outline: none !important;
 	box-shadow: inset -1px -1px 5px rgba(83, 58, 52, 0.949);
-}
+} */
 
 .input_section > form > .input > label {
 	color: #561C24;
